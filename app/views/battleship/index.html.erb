@@ -1,0 +1,32 @@
+<div class="battleship_container">
+  <h3>Their grid</h3>
+  <div class="battleship js-firing-grid">
+    <% 10.times do |x| %>
+      <div class="battleship__row">
+        <% 10.times do |y| %>
+          <div data-x="<%= x %>" data-y="<%= y %>" class="battleship__cell">
+            
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="battleship_container">
+  <h3>Your grid</h3>
+  <div class="battleship js-my-grid">
+    <% 10.times do |x| %>
+      <div class="battleship__row">
+        <% 10.times do |y| %>
+          <div class="battleship__cell <%= Ship.hit?(params[:player_index].to_i, x, y) ? "battleship__cell-with_ship" : '' %>">
+            
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  battleship.playerIndex = <%= params[:player_index].to_i %>
+</script>

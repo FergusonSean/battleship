@@ -1,0 +1,26 @@
+== README
+
+This application allows you to play a game of battleship against anothe rhuman player,
+
+To set up the app perform these steps:
+
+* bundle install
+* rake db:create
+* rake db:migrate
+* rails s
+
+navigate to http://localhost:3000/?player_index=0 in order to play as the first player.
+navigate to http://localhost:3000/?player_index=1 in order to play as the second player.
+
+Your ships will be automatically placed at this point and you can see them on the grid to the right.
+
+To fire at your opponent click on one of the cells in the grid to the left.
+
+If it is a hit the cell will turn red. Otherwise it will turn blue.
+
+Wait for your opponent to play. One of the cells on the right will become blue or red after they've gone and you may go ahead.
+
+Once you have 17 red cells in the lefthand grid you have sunk all the oppossing ships and won the game.
+
+
+
