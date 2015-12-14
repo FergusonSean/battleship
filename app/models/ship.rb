@@ -4,7 +4,7 @@ class Ship < ActiveRecord::Base
   DOWN = 1
   RIGHT = 2
 
-  def self.set_up_game_if_necessary
+  def self.setup_game_if_necessary
     if Ship.count < 10
       2.times do |player_index|
         [2,3,3,4,5].each do |ship_size|

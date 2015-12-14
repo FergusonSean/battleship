@@ -42,7 +42,7 @@ $(document).on("click", ".js-firing-grid .battleship__cell", function(e){
 
 setInterval(function(){
   $.get("last_shot?player="+ battleship.playerIndex).done(function(data){
-    if(data && data.id != lastShotId) {
+    if(data && data.id != battleship.lastShotId) {
       shot_cell = $(".js-my-grid "+
                     ".battleship__row:nth-child("+(data.x + 1)+") " +
                     ".battleship__cell:nth-child("+(data.y + 1)+")")
